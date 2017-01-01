@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
+<% include ./partials/head %>
+<% include ./partials/header %>
+
+
     <body>
         <h1>Welcome
         <% if(currentUser) { %>
@@ -28,5 +26,5 @@
                 Welcome to the <a href="/app">party</a>
             <% } %>
         </main>
-    </body>
-</html>
+
+<% include ./partials/footer %>
