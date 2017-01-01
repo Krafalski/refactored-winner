@@ -3,9 +3,24 @@
 @import 'base/base';
 
 $favorite-color: #265b6a;
-$text-color:black;
+$background-color:#D8E1E5;
+$text-color:#535454;
+$link-color:#FFFBEA;
 
 body {
-  background-color: $favorite-color;
-  color: tint($text-color, 75%);
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+}
+
+a:hover {
+  color: tint ($link-color, 75%);
+}
+
+#container {
+  max-width:90%;
+  margin:auto;
 }
