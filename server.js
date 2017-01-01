@@ -9,7 +9,7 @@ var app            = express ();
 
 
 //PORT
-var PORT           = process.env.PORT || 3000;
+var PORT           = process.env.PORT || 3001;
 
 //MIDDLEWARE
 app.use( bodyParser.urlencoded( { extended : false } ));
@@ -25,13 +25,7 @@ app.use( session({
 }));
 
 //CONTROLLERS
-//
-// var commentsController = ('./controllers/comments.js');
-// app.use('/comments', commentsController);
-//
-// var postsController   = ('./controllers/posts.js');
-// app.use('/posts', postsController);
-//
+
 var sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
@@ -44,8 +38,12 @@ app.get('/', function (req, res){
   });
 });
 
+var profileController   = require ('./controllers/profile.js');
+app.use('/profile', profileController);
+
+
 //DATABASE
-mongoose.connect('mongodb://localhost:27017/blog');
+mongoose.connect('mongodb://localhost:27017/vision-planner');
 mongoose.connection.once('open', function(){console.log('connected to mongo');});
 
 //SERVER

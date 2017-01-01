@@ -1,1 +1,1 @@
-alert('js linked')
+// alert('js linked')
