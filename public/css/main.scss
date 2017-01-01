@@ -1,0 +1,11 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import 'base/base';
+
+$favorite-color: #265b6a;
+$text-color:black;
+
+body {
+  background-color: $favorite-color;
+  color: tint($text-color, 75%);
+}
